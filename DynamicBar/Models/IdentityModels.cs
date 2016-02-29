@@ -21,7 +21,7 @@ namespace DynamicBar.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("eppysoft", throwIfV1Schema: false)
         {
         }
 
