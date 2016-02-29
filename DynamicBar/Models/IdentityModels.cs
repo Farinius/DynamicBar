@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using DynamicBar.Models.DBEntities;
+using System.Collections;
 
 namespace DynamicBar.Models
 {
@@ -29,5 +31,14 @@ namespace DynamicBar.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderState> OrderStates { get; set; }
+        public DbSet<Place> Places { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductState> ProductStates { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
     }
 }

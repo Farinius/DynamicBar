@@ -197,13 +197,37 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BarControllers\OrdersController.cs" />
+    <Compile Include="Controllers\BarControllers\OrderStatesController.cs" />
+    <Compile Include="Controllers\BarControllers\PlacesController.cs" />
+    <Compile Include="Controllers\BarControllers\ProductsController.cs" />
+    <Compile Include="Controllers\BarControllers\ProductStatesController.cs" />
+    <Compile Include="Controllers\BarControllers\ProductTypesController.cs" />
+    <Compile Include="Controllers\BarControllers\StocksController.cs" />
+    <Compile Include="Controllers\BarControllers\UnitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602291916230_Mig002.cs" />
+    <Compile Include="Migrations\201602291916230_Mig002.Designer.cs">
+      <DependentUpon>201602291916230_Mig002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602292005359_Mig003.cs" />
+    <Compile Include="Migrations\201602292005359_Mig003.Designer.cs">
+      <DependentUpon>201602292005359_Mig003.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DBEntities\Order.cs" />
+    <Compile Include="Models\DBEntities\OrderState.cs" />
+    <Compile Include="Models\DBEntities\Place.cs" />
+    <Compile Include="Models\DBEntities\Product.cs" />
+    <Compile Include="Models\DBEntities\ProductState.cs" />
+    <Compile Include="Models\DBEntities\ProductType.cs" />
+    <Compile Include="Models\DBEntities\Stock.cs" />
+    <Compile Include="Models\DBEntities\Unit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -271,6 +295,46 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\OrderStates\Create.cshtml" />
+    <Content Include="Views\OrderStates\Delete.cshtml" />
+    <Content Include="Views\OrderStates\Details.cshtml" />
+    <Content Include="Views\OrderStates\Edit.cshtml" />
+    <Content Include="Views\OrderStates\Index.cshtml" />
+    <Content Include="Views\Places\Create.cshtml" />
+    <Content Include="Views\Places\Delete.cshtml" />
+    <Content Include="Views\Places\Details.cshtml" />
+    <Content Include="Views\Places\Edit.cshtml" />
+    <Content Include="Views\Places\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\ProductStates\Create.cshtml" />
+    <Content Include="Views\ProductStates\Delete.cshtml" />
+    <Content Include="Views\ProductStates\Details.cshtml" />
+    <Content Include="Views\ProductStates\Edit.cshtml" />
+    <Content Include="Views\ProductStates\Index.cshtml" />
+    <Content Include="Views\ProductTypes\Create.cshtml" />
+    <Content Include="Views\ProductTypes\Delete.cshtml" />
+    <Content Include="Views\ProductTypes\Details.cshtml" />
+    <Content Include="Views\ProductTypes\Edit.cshtml" />
+    <Content Include="Views\ProductTypes\Index.cshtml" />
+    <Content Include="Views\Stocks\Create.cshtml" />
+    <Content Include="Views\Stocks\Delete.cshtml" />
+    <Content Include="Views\Stocks\Details.cshtml" />
+    <Content Include="Views\Stocks\Edit.cshtml" />
+    <Content Include="Views\Stocks\Index.cshtml" />
+    <Content Include="Views\Units\Create.cshtml" />
+    <Content Include="Views\Units\Delete.cshtml" />
+    <Content Include="Views\Units\Details.cshtml" />
+    <Content Include="Views\Units\Edit.cshtml" />
+    <Content Include="Views\Units\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -285,6 +349,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602291916230_Mig002.resx">
+      <DependentUpon>201602291916230_Mig002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602292005359_Mig003.resx">
+      <DependentUpon>201602292005359_Mig003.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

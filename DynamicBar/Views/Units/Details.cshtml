@@ -1,0 +1,88 @@
+﻿@model DynamicBar.Models.DBEntities.Unit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Unit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasisFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasisFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <h2>
+        Hallo Du!
+    </h2>
+</div>
+<div class="row">
+    @foreach (var item in Model.Products)
+    {
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </div>
+                <div class="panel-body">
+                    <span>Capacity: </span>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.UnitId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
